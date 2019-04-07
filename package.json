@@ -1,0 +1,19 @@
+{
+  "name": "scribe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbaxter95/scribe.git"
+  },
+  "author": "Sophie Baxter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sbaxter95/scribe/issues"
+  },
+  "homepage": "https://github.com/sbaxter95/scribe#readme"
+}
