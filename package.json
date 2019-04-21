@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "jest"
+    "test": "mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,16 @@
   },
   "homepage": "https://github.com/sbaxter95/scribe#readme",
   "dependencies": {
+    "axios": "^0.18.0",
+    "es6-promise": "^4.2.6",
     "express": "^4.16.4",
-    "jest": "^24.7.1"
+    "firebase": "^5.10.0",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^24.7.1",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
   }
 }
