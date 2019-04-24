@@ -19,6 +19,7 @@
   "homepage": "https://github.com/sbaxter95/scribe#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "es6-promise": "^4.2.6",
     "express": "^4.16.4",
     "firebase": "^5.10.0",

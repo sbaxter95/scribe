@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const port = 3001;
 const axios = require('axios');
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 const firebase = require('firebase/app');
 require('firebase/auth');
@@ -89,8 +93,9 @@ app.get('/user/documents', (req, res) => {
   });
 });
 
-app.get('/register', (req, res) => {
-  register('example@website.org', 'password');
+app.post('/register', (req, res) => {
+  const user = req.body;
+  register(user.email, user.password);
   res.send('Account created');
 });
 
@@ -106,8 +111,9 @@ app.get('/login', (req, res) => {
   res.send('Logged in');
 });
 
-app.get('/document', (req, res) => {
-  addDocument('test', null, 'master');
+app.post('/new/document', (req, res) => {
+  const document = req.body;
+  addDocument(document.content, document.changes, document.branch);
   res.send('added document');
 });
 
