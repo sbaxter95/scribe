@@ -21,67 +21,69 @@ describe('backend functionality', () => {
         assert.equal(response.text, mockResponse);
       });
   });
-  it('should allow user to upload file to document', () => {
+  it('should allow user to upload file to documents', () => {
+    return request(app)
+      .post('/document/new')
+      .then(response => {
+        assert.equal(response.status, 200);
+        assert.equal(response.text, mockResponse);
+      });
+  });
+  it('should return the correct structure of data for each document', () => {
     assert.equal(true, false);
   });
-  it('should allow user to upload file to new document', () => {
+  it('should return the difference between the file uploaded and the previous version', () => {
     assert.equal(true, false);
   });
-  it('should should return the correct structure of data for each document', () => {
+  it('should show conflicts in a document', () => {
     assert.equal(true, false);
   });
-  it('should should return the difference between the file uploaded and the previous version', () => {
+  it('should allow the user to update a version', () => {
     assert.equal(true, false);
   });
-  it('should should show conflicts in a document', () => {
+  it('should allow the user to delete a version', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to update a version', () => {
+  it('should allow the user to read all versions of a document', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to delete a version', () => {
+  it('should allow the user to give access to other users to the document', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to read all versions of a document', () => {
+  it('should allow the user to branch off from a specific version', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to give access to other users to the document', () => {
+  it('should allow the user to merge two branches', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to branch off from a specific version', () => {
+  it('should allow the user to get the latest version from any branch', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to merge two branches', () => {
+  it('should allow the user to make suggestions and comments when updating document', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to get the latest version from any branch', () => {
+  it('should allow the user to make an account with an email and password', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to make suggestions and comments when updating document', () => {
+  it('should allow the user to add a profile picture', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to make an account with an email and password', () => {
+  it('should allow the user to update their password', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to add a profile picture', () => {
+  it('should allow the user to delete their account', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to update their password', () => {
+  it('should allow the user to delete documents', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to delete their account', () => {
+  it('should allow the user to remove members from groups', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to delete documents', () => {
+  it('should allow the user to add members to groups', () => {
     assert.equal(true, false);
   });
-  it('should should allow the user to remove members from groups', () => {
-    assert.equal(true, false);
-  });
-  it('should should allow the user to add members to groups', () => {
-    assert.equal(true, false);
-  });
-  it('should should allow the user to specify levels of access to a document', () => {
+  it('should allow the user to specify levels of access to a document', () => {
     assert.equal(true, false);
   });
 });
