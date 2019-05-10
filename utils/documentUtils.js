@@ -1,12 +1,14 @@
 const axios = require('axios');
+const uniqid = require('uniqid');
 
-const addDocument = (file, changes, branch) => {
+const addDocument = (uid, file, changes, branch) => {
   try {
     return axios.post('https://scribe-aac31.firebaseio.com/documents.json', {
       uid: uid,
       content: file,
       changes: changes,
-      branch: branch
+      branch: branch,
+      docid: uniqid()
     });
   } catch (error) {
     console.error(error);
@@ -21,4 +23,5 @@ const getDocuments = () => {
   }
 };
 
-module.exports = (addDocument, getDocuments);
+module.exports.addDocument = addDocument;
+module.exports.getDocuments = getDocuments;

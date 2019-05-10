@@ -1,0 +1,8 @@
+.content {
+  min-height: 75vh;
+  margin: 0;
+  padding: 1em;
+  background-image: url('./bg-image.jpg');
+  background-position: fixed;
+  background-size: cover;
+}

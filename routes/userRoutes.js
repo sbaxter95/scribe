@@ -19,7 +19,7 @@ userRouter.post('/register', (req, res) => {
 userRouter.get('/login', (req, res) => {
   firebase
     .auth()
-    .signInWithEmailAndPassword('example@website.org', 'password')
+    .signInWithEmailAndPassword('email@example.org.com', 'password')
     .catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
